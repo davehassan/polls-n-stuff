@@ -10,6 +10,8 @@
 #
 
 class AnswerChoice < ActiveRecord::Base
+  validates :choice_text, :question_id, presence: true
+  
 
   has_many(:responses,
   class_name: "Response",
